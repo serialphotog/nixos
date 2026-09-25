@@ -9,11 +9,13 @@
     codex
     gcc
     gdb
+    gnumake
     jdk
     jre
     neovim
     obsidian
     opencode
+    tree-sitter
     vscode
   ];
 
