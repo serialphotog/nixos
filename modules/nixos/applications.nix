@@ -1,12 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
 
+let
+  unstablePkgs = import nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    config.allowUnfree = true;
+  };
+in
 {
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
     binutils
     binwalk
-    codex
     gcc
     gdb
     gnumake
@@ -14,8 +19,9 @@
     jre
     neovim
     obsidian
-    opencode
     tree-sitter
+    unstablePkgs.codex
+    unstablePkgs.opencode
     vscode
   ];
 

@@ -15,6 +15,14 @@ cd /home/adam/nix
 nix flake update
 ```
 
+## Updates
+
+```bash
+cd /home/adam/nix
+nix flake update nixpkgs-unstable
+sudo nixos-rebuild switch --flake .#Lappy
+```
+
 # Cleanup Old Generations
 
 ```bash
