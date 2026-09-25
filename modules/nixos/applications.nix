@@ -4,7 +4,16 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    binutils
+    binwalk
     codex
+    gcc
+    gdb
+    jdk
+    jre
+    neovim
+    obsidian
+    opencode
     vscode
   ];
 
