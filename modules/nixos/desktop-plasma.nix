@@ -32,6 +32,18 @@ let
               ;;
           esac
         done
+
+    # Disable KWin's "Zoom" effect.
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 \
+      --file kwinrc \
+      --group Plugins \
+      --key zoomEnabled \
+      --type bool \
+      --notify \
+      false
+
+    ${pkgs.systemd}/bin/busctl --user call \
+      org.kde.KWin /KWin org.kde.KWin reconfigure
   '';
 in
 {
