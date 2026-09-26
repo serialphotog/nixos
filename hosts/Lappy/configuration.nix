@@ -14,7 +14,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vpl-gpu-rt
+    ];
+  };
+  environment.sessionVariables.LIBVA_DRIVER_NAME = "iHD";
   services.power-profiles-daemon.enable = true;
   services.thermald.enable = true;
 
