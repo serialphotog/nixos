@@ -14,7 +14,10 @@ in
     binutils
     binwalk
     brave
+    btop
     claude-code
+    cloc
+    cmake
     fd
     file
     fzf
@@ -27,6 +30,7 @@ in
     jre
     lazygit
     neovim
+    nmap
     obsidian
     resources
     ripgrep
@@ -34,6 +38,7 @@ in
     tor-browser
     tree-sitter
     vscode
+    wireshark
   ];
 
   programs._1password.enable = true;
