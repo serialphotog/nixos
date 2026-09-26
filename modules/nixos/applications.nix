@@ -13,16 +13,18 @@ in
     bat
     binutils
     binwalk
+    brave
+    claude-code
     gcc
     gdb
+    ghostty
     gnumake
     jdk
     jre
     neovim
     obsidian
+    spotify
     tree-sitter
-    unstablePkgs.codex
-    unstablePkgs.opencode
     vscode
   ];
 
@@ -35,6 +37,7 @@ in
   environment.etc."1password/custom_allowed_browsers" = {
     text = ''
       firefox
+      brave
     '';
     mode = "0755";
   };
