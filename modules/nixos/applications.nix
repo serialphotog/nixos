@@ -1,6 +1,19 @@
 { pkgs, herdr, ... }:
 
 {
+  # Patch the Obsidian launcher to fix missing icon.
+  nixpkgs.overlays = [
+    (final: prev: {
+      obsidian = prev.obsidian.overrideAttrs (old: {
+        postFixup = ''
+          ${old.postFixup or ""}
+          substituteInPlace $out/share/applications/obsidian.desktop \
+            --replace-fail "StartupWMClass=md.Obsidian" "StartupWMClass=md.obsidian.Obsidian"
+        '';
+      });
+    })
+  ];
+
   programs.firefox.enable = true;
   programs.wireshark.enable = true;
 
