@@ -16,6 +16,7 @@ in
     brave
     claude-code
     fd
+    file
     fzf
     gcc
     gdb
