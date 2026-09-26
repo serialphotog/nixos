@@ -1,13 +1,8 @@
-{ pkgs, nixpkgs-unstable, herdr, ... }:
+{ pkgs, herdr, ... }:
 
-let
-  unstablePkgs = import nixpkgs-unstable {
-    inherit (pkgs.stdenv.hostPlatform) system;
-    config.allowUnfree = true;
-  };
-in
 {
   programs.firefox.enable = true;
+  programs.wireshark.enable = true;
 
   environment.systemPackages = with pkgs; [
     bat

@@ -24,4 +24,8 @@
   environment.systemPackages = with pkgs; [
     wget
   ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.meslo-lg
+  ];
 }
