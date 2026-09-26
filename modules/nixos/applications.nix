@@ -1,4 +1,4 @@
-{ pkgs, nixpkgs-unstable, ... }:
+{ pkgs, nixpkgs-unstable, herdr, ... }:
 
 let
   unstablePkgs = import nixpkgs-unstable {
@@ -15,15 +15,22 @@ in
     binwalk
     brave
     claude-code
+    fd
+    fzf
     gcc
     gdb
     ghostty
     gnumake
+    herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
     jdk
     jre
+    lazygit
     neovim
     obsidian
+    resources
+    ripgrep
     spotify
+    tor-browser
     tree-sitter
     vscode
   ];
