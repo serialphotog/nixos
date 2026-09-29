@@ -22,7 +22,8 @@
     ];
   };
   environment.sessionVariables.LIBVA_DRIVER_NAME = "iHD";
-  services.power-profiles-daemon.enable = true;
+  hardware.system76.enableAll = true;
+  services.power-profiles-daemon.enable = false;
   services.thermald.enable = true;
 
   networking.hostName = "Lappy";
