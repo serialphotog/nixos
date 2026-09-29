@@ -34,6 +34,7 @@
     ghostty
     gnumake
     herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
+    hugo
     jdk
     jre
     lazygit
