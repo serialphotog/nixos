@@ -13,7 +13,7 @@
   users.users.adam = {
     isNormalUser = true;
     description = "Adam";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "libvirtd" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       chezmoi

@@ -7,6 +7,7 @@
     ../../modules/nixos/desktop-plasma.nix
     ../../modules/nixos/audio.nix
     ../../modules/nixos/applications.nix
+    ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/users/adam.nix
   ];
 
