@@ -57,6 +57,7 @@
     ripgrep
     spotify
     tor-browser
+    transmission_4-gtk
     tree-sitter
     vscode
     wireshark
