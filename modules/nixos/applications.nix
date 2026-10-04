@@ -17,7 +17,19 @@
   programs.firefox.enable = true;
   programs.wireshark.enable = true;
 
-  environment.systemPackages = with pkgs; [
+  # Manually-installed to ~/Tools/ghidra rather than via nixpkgs; this just
+  # gives it a KDE menu entry.
+  environment.systemPackages = let
+    ghidraLauncher = pkgs.makeDesktopItem {
+      name = "ghidra";
+      desktopName = "Ghidra";
+      comment = "Software reverse engineering tool";
+      exec = "/home/adam/Tools/ghidra/ghidraRun";
+      icon = "/home/adam/Tools/ghidra/support/ghidra.ico";
+      categories = [ "Development" "Security" ];
+      terminal = false;
+    };
+  in with pkgs; [
     bat
     binutils
     binwalk
@@ -48,6 +60,8 @@
     tree-sitter
     vscode
     wireshark
+
+    ghidraLauncher
   ];
 
   programs._1password.enable = true;
