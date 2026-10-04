@@ -50,7 +50,6 @@
     jdk
     jre
     lazygit
-    neovim
     nmap
     obsidian
     resources
@@ -58,7 +57,7 @@
     spotify
     tor-browser
     transmission_4-gtk
-    tree-sitter
+    vim
     vscode
     wireshark
 
