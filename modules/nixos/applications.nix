@@ -44,6 +44,7 @@
     gcc
     gdb
     ghostty
+    gimp
     gnumake
     herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
     hugo
@@ -51,6 +52,7 @@
     jre
     kdePackages.kcalc
     lazygit
+    localsend
     nmap
     obsidian
     resources
