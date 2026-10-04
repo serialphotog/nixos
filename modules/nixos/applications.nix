@@ -49,6 +49,7 @@
     hugo
     jdk
     jre
+    kdePackages.kcalc
     lazygit
     nmap
     obsidian
