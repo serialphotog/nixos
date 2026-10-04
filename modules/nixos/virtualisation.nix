@@ -10,6 +10,8 @@
   };
   virtualisation.spiceUSBRedirection.enable = true;
 
+  virtualisation.docker.enable = true;
+
   programs.virt-manager.enable = true;
 
   services.spice-vdagentd.enable = true;
